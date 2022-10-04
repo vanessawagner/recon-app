@@ -8,12 +8,19 @@ const Recons = () => {
         .then(res => res.json())
         .then(data => {
             console.log(data)
+            setRecons(data)
         })
     }, [])
 
+    const reconsList = recons.map(r => <li>{r.stuff}</li>)
+ 
+
   return (
     <div>
-        Recons
+        <h3>My Race Recons</h3>
+        <hr/>
+        {reconsList}
+        <br/>
     </div>
   )
 }

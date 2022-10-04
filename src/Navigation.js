@@ -1,6 +1,4 @@
 import React from "react";
-
-/* Add NavLink to import */
 import { NavLink } from "react-router-dom";
 
 /* Add basic styling for NavLinks */
