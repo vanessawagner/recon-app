@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react'
+import React, { useState } from 'react'
 
 const ReconForm = () => {
     const [recon, setRecon] = useState({
@@ -15,8 +15,24 @@ const ReconForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
+        const newRecon = {
+            race: recon.race,
+            summary: recon.summary,
+            body: recon.body
+        }
+        fetch('http://localhost:3001/recons', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newRecon)
+        })
+        .then(r => r.json())
+        .then(data => {
+            console.log(data)
+        })
     }
-    
+
   return (
     <form onSubmit={handleSubmit}>
         <label>Race:</label>

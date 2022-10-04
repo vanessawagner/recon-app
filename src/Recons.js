@@ -13,7 +13,7 @@ const Recons = () => {
         })
     }, [])
 
-    const reconsList = recons.map(r => <li>{r.stuff}</li>)
+    const reconsList = recons.map(r => <li>{r.race}</li>)
  
 
   return (
