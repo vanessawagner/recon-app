@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import NewButton from './NewButton'
 
 const Recons = () => {
     const [recons, setRecons] = useState([])
@@ -21,6 +22,7 @@ const Recons = () => {
         <hr/>
         {reconsList}
         <br/>
+        <NewButton />
     </div>
   )
 }
