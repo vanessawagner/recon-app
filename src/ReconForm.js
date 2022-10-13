@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const ReconForm = () => {
+const ReconForm = (props) => {
     const [recon, setRecon] = useState({
         race: '',
         summary: '',
@@ -30,6 +30,7 @@ const ReconForm = () => {
         .then(r => r.json())
         .then(data => {
             console.log(data)
+            props.history.push('/recons')
         })
     }
 

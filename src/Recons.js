@@ -8,12 +8,12 @@ const Recons = () => {
         fetch("http://localhost:3001/recons")
         .then(res => res.json())
         .then(data => {
-            console.log(data)
+            console.log("recons", data)
             setRecons(data)
         })
     }, [])
 
-    const reconsList = recons.map(r => <li>{r.race}</li>)
+    const reconsList = recons.map(r => <li key="{r.race}">{r.race}</li>)
  
 
   return (
