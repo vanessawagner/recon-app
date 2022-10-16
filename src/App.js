@@ -12,15 +12,12 @@ const App = () =>{
       <Navigation />
       <div className="App">
         <Switch>
-          <Route exact path="/" >
-            <Home/>
-          </Route>
-          <Route exact path="/recons" >
-            <Recons />
-          </Route>
-          <Route exact path="/recons/new" >
-            <ReconForm />
-          </Route>
+          <Route exact path="/" component={Home}/>
+          
+          <Route exact path="/recons" component={Recons} />
+
+          <Route exact path="/recons/new" component={ReconForm} />
+
         </Switch>
       </div>
     </Router>

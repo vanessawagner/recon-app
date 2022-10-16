@@ -7,6 +7,7 @@ const ReconForm = (props) => {
         body: ''
     })
 
+
     const handleChange = (e) => {
         setRecon({
             ...recon, [e.target.name]:e.target.value
@@ -30,7 +31,8 @@ const ReconForm = (props) => {
         .then(r => r.json())
         .then(data => {
             console.log(data)
-            props.history.push('/recons')
+            
+            props.history.push('/recons');
         })
     }
 
