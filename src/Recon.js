@@ -13,12 +13,16 @@ const Recon = (props) => {
         .then(res => res.json())
         .then(data => {
           console.log(data)
+          setRecon(data)
         })
     }, [])
 
   return (
     <div>
-
+      <h2>{recon.race}</h2>
+      <br/>
+      <h3>Summary: {recon.summary}</h3>
+      <h3>Body: {recon.body}</h3>
     </div>
   )
 }
