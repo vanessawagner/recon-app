@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import NewButton from './NewButton'
+import ReconLink from './ReconLink'
 
 const Recons = () => {
     const [recons, setRecons] = useState([])
@@ -13,14 +14,15 @@ const Recons = () => {
         })
     }, [])
 
-    const reconsList = recons.map(r => <li key="{r.race}">{r.race}</li>)
- 
+     const reconsList = recons.map(r => <ReconLink recon={r}/>)
+    //const reconsList = recons.map(r => <li>{r.race}</li>)
 
   return (
     <div>
         <h3>My Race Recons</h3>
         <hr/>
         {reconsList}
+        <br/>
         <br/>
         <NewButton />
     </div>

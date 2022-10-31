@@ -4,6 +4,7 @@ import Home from './Home'
 import Recons from './Recons'
 import Navigation from './Navigation'
 import ReconForm from './ReconForm'
+import Recon from './Recon'
 import './App.css';
 
 const App = () =>{
@@ -18,6 +19,7 @@ const App = () =>{
 
           <Route exact path="/recons/new" component={ReconForm} />
 
+          <Route path="/recons/:id" component={Recon} />
         </Switch>
       </div>
     </Router>
