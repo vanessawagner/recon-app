@@ -9,7 +9,11 @@ const Recon = (props) => {
 
     useEffect(() => {
         
-        fetch(`http://localhost:3001/recons/${1}`)
+        fetch(`http://localhost:3001/recons/${props.match.params.id}`)
+        .then(res => res.json())
+        .then(data => {
+          console.log(data)
+        })
     }, [])
 
   return (
