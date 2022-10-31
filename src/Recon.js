@@ -3,8 +3,9 @@ import React, { useState, useEffect} from 'react'
 const Recon = (props) => {
     const [recon, setRecon] = useState({
         race: '',
-        summary: '',
-        body: ''
+        swim: '',
+        bike: '',
+        run: ''
     })
 
     useEffect(() => {
@@ -21,8 +22,9 @@ const Recon = (props) => {
     <div>
       <h2>{recon.race}</h2>
       <br/>
-      <h3>Summary: {recon.summary}</h3>
-      <h3>Body: {recon.body}</h3>
+      <h3>Swim: {recon.swim}</h3>
+      <h3>Bike: {recon.bike}</h3>
+      <h3>Run: {recon.run}</h3>
     </div>
   )
 }

@@ -3,8 +3,9 @@ import React, { useState } from 'react'
 const ReconForm = (props) => {
     const [recon, setRecon] = useState({
         race: '',
-        summary: '',
-        body: ''
+        swim: '',
+        bike: '',
+        run: ''
     })
 
 
@@ -18,8 +19,9 @@ const ReconForm = (props) => {
         e.preventDefault()
         const newRecon = {
             race: recon.race,
-            summary: recon.summary,
-            body: recon.body
+            swim: recon.swim,
+            bike: recon.bike,
+            run: recon.run
         }
         fetch('http://localhost:3001/recons', {
             method: 'POST',
@@ -40,10 +42,12 @@ const ReconForm = (props) => {
     <form onSubmit={handleSubmit}>
         <label>Race:</label>
         <input name="race" onChange={handleChange} type="text"/><br/>
-        <label>Summary:</label>
-        <textarea name="summary" onChange={handleChange} type="text"/><br/>
-        <label>Body:</label>
-        <textarea name="body" onChange={handleChange} type="text"/><br/>
+        <label>Swim:</label>
+        <textarea name="swim" onChange={handleChange} type="text"/><br/>
+        <label>Bike:</label>
+        <textarea name="bike" onChange={handleChange} type="text"/><br/>
+        <label>Run:</label>
+        <textarea name="run" onChange={handleChange} type="text"/><br/>
         <input type="submit"/>
     </form>
   )
